@@ -143,12 +143,11 @@ html {
 }
 
 /* Ensure full-height elements are aligned properly */
-html,
 body {
-    min-height: 100vh;
-    display: flex;
-    font-family: var(--font-family-montserrat);
+    min-height: 100svh;
+    display: grid;
+    font-family: var(--font-family);
     line-height: 1.5;
     text-align: left;
-    background-color: var(--color-cream);
+    background-color: var(--light-grayish-blue);
 }
