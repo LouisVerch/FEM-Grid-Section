@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+/* Color Palette */
+:root {
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+
+    /* Text colors */
+    --verified-graduate-opacity: rgba(var(--moderate-violet), 0.5);
+    --review-text-opacity: rgba(var(--very-dark-grayish-blue), 0.7);
+
+    /* Typography */
+    --font-family: 'Barlow Semi Condensed', sans-serif;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --body-font-size: 13px;
+}
+
+/* Global Box-Sizing */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Ensure padding and border are included in element's width/height */
+}
+
+/* Remove default margin and padding for common elements */
+ul,
+ol {
+    list-style: none;
+    /* Remove default list styles */
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    /* Remove underlines */
+    color: inherit;
+    /* Make links inherit text color */
+}
+
+button,
+input,
+select,
+textarea {
+    background: none;
+    /* Remove background from form elements */
+    border: none;
+    /* Remove borders from form elements */
+    font-family: inherit;
+    /* Ensure form elements inherit font */
+    font-size: inherit;
+    /* Ensure form elements inherit font size */
+}
+
+table {
+    border-collapse: collapse;
+    /* Collapse borders in tables */
+    border-spacing: 0;
+    /* Remove spacing between table cells */
+}
+
+/* Images and Media */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    /* Remove inline-block space below images */
+    max-width: 100%;
+    /* Ensure media elements are responsive */
+    height: auto;
+    /* Maintain aspect ratio of media elements */
+}
+
+/* Form elements */
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    /* Ensure forms inherit font from root */
+    font-size: 100%;
+    /* Prevent font size issues in form elements */
+    background: transparent;
+    /* Remove background from inputs */
+}
+
+/* Remove default fieldset styles */
+fieldset {
+    border: none;
+    /* Remove borders from fieldset */
+    padding: 0;
+    /* Remove padding from fieldset */
+    margin: 0;
+    /* Remove margin from fieldset */
+}
+
+/* Remove default padding for blockquotes */
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Ensure no gap or unwanted space between inline-block elements */
+iframe {
+    display: block;
+    /* Remove inline-block behavior */
+}
+
+/* Reset for the document structure elements */
+header,
+footer,
+nav,
+section,
+article,
+aside,
+main,
+figure,
+figcaption {
+    display: block;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure full-height elements are aligned properly */
+html,
+body {
+    min-height: 100vh;
+    display: flex;
+    font-family: var(--font-family-montserrat);
+    line-height: 1.5;
+    text-align: left;
+    background-color: var(--color-cream);
+}
