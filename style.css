@@ -2,7 +2,7 @@
 
 /* Color Palette */
 :root {
-    --moderate-violet: hsl(263, 55%, 52%);
+    --moderate-violet: rgb(117, 65, 200);
     --very-dark-grayish-blue: hsl(217, 19%, 35%);
     --very-dark-blackish-blue: hsl(219, 29%, 14%);
     --white: hsl(0, 0%, 100%);
@@ -11,14 +11,13 @@
     --light-grayish-blue: hsl(210, 46%, 95%);
 
     /* Text colors */
-    --verified-graduate-opacity: rgba(var(--moderate-violet), 0.5);
-    --review-text-opacity: rgba(var(--very-dark-grayish-blue), 0.7);
+    --verified-graduate-opacity: hsla(263, 55%, 52%, 0.5);
+    --review-text-opacity: hsla(217, 19%, 35%, 70%);
 
     /* Typography */
     --font-family: 'Barlow Semi Condensed', sans-serif;
     --font-weight-500: 500;
     --font-weight-600: 600;
-    --body-font-size: 13px;
 }
 
 /* Global Box-Sizing */
@@ -28,23 +27,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Ensure padding and border are included in element's width/height */
 }
 
-/* Remove default margin and padding for common elements */
 ul,
 ol {
     list-style: none;
-    /* Remove default list styles */
     padding: 0;
     margin: 0;
 }
 
 a {
     text-decoration: none;
-    /* Remove underlines */
     color: inherit;
-    /* Make links inherit text color */
 }
 
 button,
@@ -52,34 +46,24 @@ input,
 select,
 textarea {
     background: none;
-    /* Remove background from form elements */
     border: none;
-    /* Remove borders from form elements */
     font-family: inherit;
-    /* Ensure form elements inherit font */
     font-size: inherit;
-    /* Ensure form elements inherit font size */
 }
 
 table {
     border-collapse: collapse;
-    /* Collapse borders in tables */
     border-spacing: 0;
-    /* Remove spacing between table cells */
 }
 
-/* Images and Media */
 img,
 picture,
 video,
 canvas,
 svg {
     display: block;
-    /* Remove inline-block space below images */
     max-width: 100%;
-    /* Ensure media elements are responsive */
     height: auto;
-    /* Maintain aspect ratio of media elements */
 }
 
 /* Form elements */
@@ -88,43 +72,32 @@ button,
 select,
 textarea {
     font-family: inherit;
-    /* Ensure forms inherit font from root */
     font-size: 100%;
-    /* Prevent font size issues in form elements */
     background: transparent;
-    /* Remove background from inputs */
 }
 
-/* Remove default fieldset styles */
 fieldset {
     border: none;
-    /* Remove borders from fieldset */
     padding: 0;
-    /* Remove padding from fieldset */
     margin: 0;
-    /* Remove margin from fieldset */
 }
 
-/* Remove default padding for blockquotes */
 blockquote {
     margin: 0;
     padding: 0;
 }
 
-/* Clear floats */
 .clearfix::after {
     content: "";
     display: block;
     clear: both;
 }
 
-/* Ensure no gap or unwanted space between inline-block elements */
 iframe {
     display: block;
-    /* Remove inline-block behavior */
 }
 
-/* Reset for the document structure elements */
+/* Document structure elements */
 header,
 footer,
 nav,
@@ -135,19 +108,140 @@ main,
 figure,
 figcaption {
     display: block;
-
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-/* Ensure full-height elements are aligned properly */
 body {
     min-height: 100svh;
-    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: var(--font-family);
-    line-height: 1.5;
+    line-height: 1.4;
     text-align: left;
     background-color: var(--light-grayish-blue);
+    padding: 3rem 1.5rem;
+    text-wrap: pretty;
+}
+
+.main__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2.3rem 2rem 2.5rem;
+    gap: 1.5rem;
+    background-color: var(--light-gray);
+    border-radius: 1rem;
+}
+
+#daniel {
+    background-image: url('data:image/svg+xml,<svg width="104" height="102" xmlns="http://www.w3.org/2000/svg"><path d="M104 102V59.727H84.114c0-5.871.689-11.182 2.068-15.933 1.379-4.75 3.42-9.287 6.125-13.61C95.01 25.86 98.909 22.257 104 19.375V0c-9.758 4.27-17.712 9.874-23.864 16.813-6.151 6.939-10.712 14.545-13.681 22.818C63.485 47.904 62 59.941 62 75.74V102h42zm-62 0V59.727H22.114c0-5.871.689-11.182 2.068-15.933 1.379-4.75 3.42-9.287 6.125-13.61C33.01 25.86 36.909 22.257 42 19.375V0c-9.652 4.27-17.58 9.874-23.784 16.813C12.01 23.752 7.424 31.358 4.455 39.631 1.485 47.904 0 59.941 0 75.74V102h42z" fill="%23A775F1" fill-rule="nonzero"/></svg>');
+    background-repeat: no-repeat;
+    background-position: top right 15%;
+    background-color: var(--moderate-violet);
+    background-size: 7.5srem;
+    color: white;
+}
+
+.header-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: -0.5rem;
+}
+
+h1 {
+    font-size: clamp(0.8rem, 2vw + 0.5rem, 1.2rem);
+    /* Responsive font size */
+}
+
+span {
+    opacity: 50%;
+}
+
+img {
+    aspect-ratio: 1;
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+    border-radius: 50%;
+    border: 0.2rem solid hsla(0, 0%, 81%, 0.5);
+}
+
+h2 {
+    font-weight: var(--font-weight-600);
+    font-size: clamp(1rem, 3vw + 1rem, 1.5rem);
+    /* Responsive heading font size */
+}
+
+p {
+    font-weight: var(--font-weight-500);
+    opacity: 70%;
+    font-size: clamp(0.75rem, 2vw + 0.5rem, 1rem);
+    /* Responsive paragraph font size */
+}
+
+#daniel {
+    color: var(--light-gray);
+}
+
+#jonathan {
+    background-color: var(--very-dark-grayish-blue);
+    color: var(--light-gray);
+}
+
+#jeanette {
+    background-color: white;
+    color: var(--very-dark-grayish-blue);
+}
+
+#patrick {
+    background-color: var(--very-dark-blackish-blue);
+    color: var(--light-gray);
+}
+
+#kira {
+    background-color: white;
+    color: var(--very-dark-grayish-blue);
+}
+
+@media screen and (min-width: 48em) {
+    .main__container {
+        display: grid;
+        grid-template:
+            "a a a b e" 1fr "c d d d e" 1fr;
+        gap: 2.5rem;
+        max-width: 100rem;
+    }
+
+    #daniel {
+        grid-area: a;
+    }
+
+    #jonathan {
+        grid-area: b;
+    }
+
+    #jeanette {
+        grid-area: c;
+    }
+
+    #patrick {
+        grid-area: d;
+    }
+
+    #kira {
+        grid-area: e;
+    }
+
+    .card {
+        padding: auto;
+    }
 }
