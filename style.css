@@ -212,7 +212,43 @@ p {
     color: var(--very-dark-grayish-blue);
 }
 
-@media screen and (min-width: 48em) {
+@media screen and (min-width:48em) {
+
+    .main__container {
+        display: grid;
+        grid-template:
+            "a a a b " 1fr "c d d d " 1fr
+            "e e e e" 1fr;
+        gap: 2.5rem;
+        max-width: 100rem;
+    }
+
+    #daniel {
+        grid-area: a;
+    }
+
+    #jonathan {
+        grid-area: b;
+    }
+
+    #jeanette {
+        grid-area: c;
+    }
+
+    #patrick {
+        grid-area: d;
+    }
+
+    #kira {
+        grid-area: e;
+    }
+
+    .card {
+        padding: auto;
+    }
+}
+
+@media screen and (min-width: 90em) {
     .main__container {
         display: grid;
         grid-template:
